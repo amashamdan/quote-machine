@@ -16,6 +16,7 @@ function getQuote(){
 	    	console.log(response);
 	    	/* Upon a successful request, the quote is displayed in the quote-text div */
 	        $(".quote-text").html(response.quote);
+	        $(".quote-author").html(response.author);
 	    }
 	});
 }
@@ -26,7 +27,7 @@ $(".generate").click(function(){
 	getQuote();
 });
 
-/* A function to randomly generate a color each time a quote is grapped. */
+/* A function to randomly generate a color each time a quote is grabbed. */
 function generateColor(){
 	var letters = "0123456789abcdef".split("");
 	var color = "#";
