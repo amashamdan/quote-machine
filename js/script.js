@@ -13,10 +13,13 @@ function getQuote(){
 	    url: quoteURL,
 	    dataType: "jsonp",
 	    success: function(response) {
-	    	console.log(response);
 	    	/* Upon a successful request, the quote is displayed in the quote-text div */
 	        $(".quote-text").html(response.quote);
+	        /* The author's name is also displayed */
 	        $(".quote-author").html(response.author);
+	        /* The content of the tweet is modified to include the new quote and its author */
+	        $(".twitter-share-button").attr("href", 'https://twitter.com/share?text="' 
+	        	+ response.quote + '". ' + response.author);
 	    }
 	});
 }
@@ -29,11 +32,16 @@ $(".generate").click(function(){
 
 /* A function to randomly generate a color each time a quote is grabbed. */
 function generateColor(){
+	// Generate an array of letters which make up the color code.
 	var letters = "0123456789abcdef".split("");
+	// The color variable which holds the color hex code.
 	var color = "#";
+	/* The loop chooses six random letters/digits and adds them to the color code until we have
+	a full color code. */
 	for (var i = 0; i < 6; i++){
 		var index = Math.floor(Math.random()*16);
 		color += letters[index];
 	}
+	/* The container div color is changed to the new color. */
 	$(".container").css({"backgroundColor": color});
 }
