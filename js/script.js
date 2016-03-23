@@ -3,7 +3,6 @@ var quoteURL = "http://quotesondesign.com/api/3.0/api-3.0.json?callback=my_funct
 
 /* When the page is loaded, getQuote function is called to get a random quote */
 $(document).ready(function(){
-	generateColor();
 	getQuote();
 });
 
@@ -26,8 +25,8 @@ function getQuote(){
 
 /* A click handler to get a quote when the Genereta button is clicked */
 $(".generate").click(function(){
-	generateColor();
 	getQuote();
+	generateColor();
 });
 
 /* A function to randomly generate a color each time a quote is grabbed. */

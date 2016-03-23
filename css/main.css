@@ -1,0 +1,4 @@
+.container {
+	transition: all 1s ease;
+	background-color: green;	
+}
