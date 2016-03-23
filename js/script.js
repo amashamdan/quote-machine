@@ -42,5 +42,6 @@ function generateColor(){
 		color += letters[index];
 	}
 	/* The container div color is changed to the new color. */
-	$(".container").css({"backgroundColor": color});
+	$("body").css({"backgroundColor": color, "color": color});
+	$(".quote-area").css({"backgroundColor": color});
 }

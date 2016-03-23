@@ -8,22 +8,27 @@
 <body>
 	<!-- Container div -->
 	<div class="container">
-		<!-- Header div, it shows the page title, the author, credit to quotedesign.com and instrucions on how to use the page. -->
+		<!-- Header div, it shows the page title and instrucions on how to use the page. -->
 		<div class="header">
 			<h1 class="title">Random Quote Machine</h1>
-			<h4 class="author">By Amer Hamdan</h4>
-			<h4 class="credit">Quotes by <a href="http://quotesondesign.com/" target="blank">quotesondesign.com</a></h4>
 			<p class="guide">Click "Generate" to get a random quote (Due to time limit, only one new quote is provided every 5 minutes).</p>
 			<p class="guide">Click on the tweet button to share the quote.</p>
 		</div>
 		<!-- The quote div, it contains the quote, the author and two buttons, one to generate a random quote and another to tweet a quote. -->
 		<div class="quote">
-			<p class="quote-text"></p>
-			<p class="quote-author"></p>
-			<button class="generate">Generate</button>
+			<div class="quote-area">
+				<p class="quote-text"></p>
+				<p class="quote-author"></p>
+			</div>
+			<button class="generate">Generate</button><br/>
 			<!-- The tweet button, provided by twitter resources. -->
 			<a href="https://twitter.com/share?text=nothing" class="twitter-share-button" data-via="amashamdan" data-size="large" data-related="quotesondesign" data-hashtags="quote" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 		</div>
+	</div>
+	<!-- Footer section. Contains the credits to quotesdesgin.com and page info -->
+	<div class="footer">
+	<p class="author">By Amer Hamdan</p>
+	<p class="credit">Quotes by <a href="http://quotesondesign.com/" target="blank"><span class="link">quotesondesign.com</span></a></p>
 	</div>
 </body>
 <script src="js/script.js"></script>

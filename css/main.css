@@ -1,4 +1,65 @@
-.container {
+body {
 	transition: all 1s ease;
-	background-color: green;	
+	background-color: #A80000;
+	color: #A80000;
+}
+
+.container {
+	padding: 20px 30px 30px 30px;
+	margin: 50px auto 0 auto;
+	width: 700px;
+	height: 400px;
+	background-color: white;
+	border-radius: 30px;	
+}
+
+.quote-area {
+	transition: all 1s ease;
+	background-color: #A80000;
+	color: white;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.author,
+.credit,
+a:link {
+	text-decoration: none;
+}
+
+.quote-author {
+	text-align: right;
+}
+
+.link {
+	color: white;
+}
+
+.footer {
+	color: white;
+	width: 700px;
+	margin: 0 auto;
+}
+
+.title {
+	text-align: center;
+}
+
+.twitter-share-button {
+	margin: 10px 15px 15px 15px;
+}
+
+.generate {
+	margin: 10px 0 0 15px;
+	background-color: #1B95E0;
+	border: none;
+	width: 75px;
+	height: 27px;
+	color: white;
+	border-radius: 3px;
+}
+
+.generate:hover {
+	cursor: pointer;
+	background-color: #0074bc;
 }
