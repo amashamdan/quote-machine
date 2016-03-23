@@ -3,6 +3,7 @@ var quoteURL = "http://quotesondesign.com/api/3.0/api-3.0.json?callback=my_funct
 
 /* When the page is loaded, getQuote function is called to get a random quote */
 $(document).ready(function(){
+	generateColor();
 	getQuote();
 });
 
@@ -21,6 +22,17 @@ function getQuote(){
 
 /* A click handler to get a quote when the Genereta button is clicked */
 $(".generate").click(function(){
-	console.log("clicked");
+	generateColor();
 	getQuote();
 });
+
+/* A function to randomly generate a color each time a quote is grapped. */
+function generateColor(){
+	var letters = "0123456789abcdef".split("");
+	var color = "#";
+	for (var i = 0; i < 6; i++){
+		var index = Math.floor(Math.random()*16);
+		color += letters[index];
+	}
+	$(".container").css({"backgroundColor": color});
+}
