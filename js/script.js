@@ -19,3 +19,8 @@ function getQuote(){
 	});
 }
 
+/* A click handler to get a quote when the Genereta button is clicked */
+$(".generate").click(function(){
+	console.log("clicked");
+	getQuote();
+});
