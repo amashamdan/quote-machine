@@ -2,6 +2,7 @@ body {
 	transition: all 1s ease;
 	background-color: #0072C6;
 	color: #0072C6;
+	font-family: 'Raleway', sans-serif;
 }
 
 .container {
@@ -56,7 +57,7 @@ a:link {
 	width: 75px;
 	height: 27px;
 	color: white;
-	border-radius: 3px;
+	border-radius: 4px;
 }
 
 .generate:hover {
