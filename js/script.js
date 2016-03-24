@@ -23,7 +23,7 @@ function getQuote(){
 	        $(".quote-author").html(response.author);
 	        /* The content of the tweet is modified to include the new quote and its author */
 	        $(".twitter-share-button").attr("href", 'https://twitter.com/share?text="' 
-	        	+ response.quote + '". ' + response.author);
+	        	+ response.quote + '" - ' + response.author + " via @amasahamdan");
 	    }
 	});
 }

@@ -26,6 +26,7 @@ body {
 .credit,
 a:link {
 	text-decoration: none;
+	color: white;
 }
 
 .quote-author {
@@ -50,17 +51,23 @@ a:link {
 	margin: 10px 15px 15px 15px;
 }
 
-.generate {
+.generate,
+.tweet {
 	margin: 10px 0 0 15px;
 	background-color: #1B95E0;
 	border: none;
-	width: 75px;
+	width: 95px;
 	height: 27px;
 	color: white;
 	border-radius: 4px;
 }
 
-.generate:hover {
+.tweet-link {
+	color: white;
+}
+
+.generate:hover,
+.tweet:hover {
 	cursor: pointer;
 	background-color: #0074bc;
 }
