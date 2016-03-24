@@ -1,5 +1,10 @@
 /* The URL for quotesondesign.com to request a random quote */
 var quoteURL = "http://quotesondesign.com/api/3.0/api-3.0.json?callback=my_function";
+/* The colors array hold the colors which the page will switch to every time a new quote
+ is grabbed. */
+var colors = ["#0072C6", "#077568", "#2B579A", "#A4373A", "#217346", "#80397B", "#D24726"];
+/* The following variable holds the index of the color to be displayed. */
+var colorIndex = [1];
 
 /* When the page is loaded, getQuote function is called to get a random quote */
 $(document).ready(function(){
@@ -18,7 +23,7 @@ function getQuote(){
 	        $(".quote-author").html(response.author);
 	        /* The content of the tweet is modified to include the new quote and its author */
 	        $(".twitter-share-button").attr("href", 'https://twitter.com/share?text="' 
-	        	+ response.quote + '". ' + response.author);
+	        	+ response.quote + '" - ' + response.author + " via @amasahamdan");
 	    }
 	});
 }
@@ -29,19 +34,18 @@ $(".generate").click(function(){
 	generateColor();
 });
 
-/* A function to randomly generate a color each time a quote is grabbed. */
+/* A function to change the color of the page each time a quote is grabbed. */
 function generateColor(){
-	// Generate an array of letters which make up the color code.
-	var letters = "0123456789abcdef".split("");
-	// The color variable which holds the color hex code.
-	var color = "#";
-	/* The loop chooses six random letters/digits and adds them to the color code until we have
-	a full color code. */
-	for (var i = 0; i < 6; i++){
-		var index = Math.floor(Math.random()*16);
-		color += letters[index];
+	/* The color to be displayed is selected from the colors array. */
+	var color = colors[colorIndex];
+	/* The if statements checks for the colorIndex, if all colors have been displayed, colorIndex
+	is reset to zero, if not it is incremented by 1. */
+	if (colorIndex == 6){
+		colorIndex = 0;
+	} else {
+		colorIndex++;
 	}
-	/* The container div color is changed to the new color. */
+	/* The colors of the body and quote-area div are changed. */
 	$("body").css({"backgroundColor": color, "color": color});
 	$(".quote-area").css({"backgroundColor": color});
 }
