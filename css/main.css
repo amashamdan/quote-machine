@@ -1,7 +1,7 @@
 body {
 	transition: all 1s ease;
-	background-color: #A80000;
-	color: #A80000;
+	background-color: #0072C6;
+	color: #0072C6;
 }
 
 .container {
@@ -15,7 +15,7 @@ body {
 
 .quote-area {
 	transition: all 1s ease;
-	background-color: #A80000;
+	background-color: #0072C6;
 	color: white;
 	padding: 20px;
 	border-radius: 20px;
